@@ -1,4 +1,4 @@
-import React from "react";
+import Link from "next/link";
 
 // icons
 import { MdNotificationsNone, MdSearch } from "react-icons/md";
@@ -6,7 +6,9 @@ import { MdNotificationsNone, MdSearch } from "react-icons/md";
 const Header = (): JSX.Element => {
   return (
     <header className="flex justify-between place-items-center px-10 py-4">
-      <h1 className="text-3xl font-bold h1 pl-10">LISTEN</h1>
+      <Link href="/">
+        <h1 className="text-3xl font-bold h1 pl-10 cursor-pointer">LISTEN</h1>
+      </Link>
       <nav className="flex-center space-x-8">
         <form className="relative">
           <input
@@ -21,7 +23,7 @@ const Header = (): JSX.Element => {
             <MdSearch size="1.6rem" color="white" fontWeight="100" />
           </button>
         </form>
-        <span className="relative">
+        <span className="relative cursor-pointer">
           <MdNotificationsNone size="1.6rem" />
           <span className="bg-red-500 rounded-full h-2 w-2 absolute top-0 right-1"></span>
         </span>
