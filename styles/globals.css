@@ -1,3 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  font-family: "Lato", sans-serif;
+}
+
+.btn-green {
+  @apply bg-green-400 text-white p-3 rounded-md;
+}
+
+.center {
+  @apply justify-center place-items-center;
+}
+
+.flex-center {
+  @apply flex justify-center place-items-center;
+}
+
+.flex-col-center {
+  @apply flex flex-col justify-center place-items-center;
+}
+
+.default-transition {
+  @apply transition duration-500 ease-in-out;
+}
+
+h1 {
+  font-family: "Permanent Marker", cursive;
+}
