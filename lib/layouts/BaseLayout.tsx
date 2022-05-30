@@ -1,5 +1,5 @@
 import React from "react";
-import "flowbite";
+// import "flowbite";
 import Head from "next/head";
 
 // components
@@ -11,7 +11,7 @@ interface Props {
 
 const BaseLayout: React.FC<Props> = ({ children }): JSX.Element => {
   return (
-    <>
+    <div className="bg-[#181818] text-gray-100 h-[100vh]">
       <Head>
         <title>Listen</title>
         <meta name="description" content="Listen is a music player." />
@@ -19,7 +19,7 @@ const BaseLayout: React.FC<Props> = ({ children }): JSX.Element => {
       </Head>
       <Header />
       {children}
-    </>
+    </div>
   );
 };
 
