@@ -1,12 +1,32 @@
 import type { NextPage } from "next";
-import Head from "next/head";
 import Image from "next/image";
+
+// layouts
 import BaseLayout from "../lib/layouts/BaseLayout";
+
+// components
+import LandingSection from "../lib/components/index/LandingSection";
+import ActivePageMenu from "../lib/components/baselayout/ActivePageMenu";
+import TableSection from "../lib/components/index/TableSection";
+
+// icons
 
 const Home: NextPage = () => {
   return (
     <BaseLayout>
-      <div className="text-red-900">hello world</div>
+      <LandingSection />
+      <main className="main text-white flex">
+        <ActivePageMenu />
+        <section className="w-[80%] px-8">
+          <div>
+            <img
+              src="https://via.placeholder.com/1100x350.png?text=Music+Cover"
+              className="h-80 w-full"
+            />
+          </div>
+          <TableSection />
+        </section>
+      </main>
     </BaseLayout>
   );
 };
