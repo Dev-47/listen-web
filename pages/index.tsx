@@ -21,6 +21,7 @@ const Home: NextPage = () => {
           <div>
             <img
               src="https://via.placeholder.com/1100x350.png?text=Music+Cover"
+              alt="music cover"
               className="h-80 w-full"
             />
           </div>
