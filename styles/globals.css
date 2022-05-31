@@ -5,6 +5,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* default styles */
 * {
   font-family: "Lato", sans-serif;
 }
@@ -29,10 +30,12 @@
   @apply transition duration-500 ease-in-out;
 }
 
+/* page title style */
 h1 {
   font-family: "Permanent Marker", cursive;
 }
 
+/* landing page animation */
 .landing {
   opacity: 0;
   animation: landing 4s 1.5s ease-in-out forwards;
@@ -58,7 +61,9 @@ h1 {
     height: 0;
   }
 }
+/* end landing page animation */
 
+/* main page opening animation */
 .main {
   opacity: 0;
   animation: main 0.3s 5.5s ease-in forwards;
@@ -69,3 +74,77 @@ h1 {
     opacity: 1;
   }
 }
+/* end of main page opening animation */
+
+/* play or pause animation */
+.control {
+  border: 0.1rem solid #ddd;
+  border-radius: 50%;
+  margin: 0.1rem;
+  padding: 0.1rem;
+  width: 2.3rem;
+  height: 2.3rem;
+  font-size: 0;
+  white-space: nowrap;
+  text-align: center;
+  cursor: pointer;
+}
+
+.control,
+.control .left,
+.control .right,
+.control:before {
+  display: inline-block;
+  vertical-align: middle;
+  transition: background 0.4s, border 0.4s, width 0.4s, height 0.4s, margin 0.4s;
+  transition-timing-function: cubic-bezier(1, 0, 0, 1);
+}
+
+.control:before {
+  content: "";
+  height: 2rem;
+}
+
+.control.pause {
+  background-color: #ddd;
+}
+
+.control.pause .left,
+.control.pause .right {
+  margin: 0;
+  border-left: 0.2rem solid #222;
+  border-top: 0 solid transparent;
+  border-bottom: 0 solid transparent;
+  height: 1.2rem;
+}
+
+.control.pause .left {
+  border-right: 0.4rem solid transparent;
+}
+
+.control.play .left {
+  margin-left: 0.4rem;
+  border-left: 0.5rem solid #ddd;
+  border-top: 0.3rem solid transparent;
+  border-bottom: 0.3rem solid transparent;
+  border-right: 0rem solid transparent;
+  height: 1rem;
+}
+
+.control.play .right {
+  margin: 0;
+  border-left: 0.5rem solid #ddd;
+  border-top: 0.3rem solid transparent;
+  border-bottom: 0.3rem solid transparent;
+  height: 0rem;
+}
+
+.control:hover {
+  border-color: #999;
+}
+
+.control:hover .left,
+.control:hover .right {
+  border-left-color: #999;
+}
+/*end of play or pause animation */
