@@ -28,7 +28,7 @@ const TableSection = (): JSX.Element => {
         <tbody className="border-r border-2">
           <tr className="text-white border-b">
             <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap">
-              Apple MacBook Pro 17"
+              Apple MacBook Pro 17
             </th>
             <td className="px-6 py-4">Sliver</td>
             <td className="px-6 py-4">Laptop</td>
