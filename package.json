@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test:build": "next build && rm -rf /build"
+    "test:build": "next build && rm -rf build/"
   },
   "dependencies": {
     "axios": "^0.27.2",
